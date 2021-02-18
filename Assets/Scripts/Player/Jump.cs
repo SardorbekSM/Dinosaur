@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    //private float _speed;
     private float _jumpForce = 5;
-    //private float _moveInput;
 
     private bool _isGrounded;
 
@@ -41,7 +39,6 @@ public class Jump : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0)
         {
             _rigidbody2D.velocity = Vector2.up * _jumpForce;
-            _extraJumps--;
         }
         else if(Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0)
         {
