@@ -17,9 +17,6 @@ public class Jump : MonoBehaviour
     [SerializeField]
     private float _checkRadius;
 
-    private int _extraJumps = 1;
-
-
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();        
@@ -27,15 +24,21 @@ public class Jump : MonoBehaviour
 
     private void Update()
     {
-        
-        if (Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _whatIsGround))
+        if (CanJump())
         {
-            _extraJumps = 1;
+            _Jump();
         }
+    }
 
-        if(Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0)
-        {
-            _rigidbody2D.velocity = Vector2.up * _jumpForce;
-        }
+    private void _Jump()
+    {
+        _rigidbody2D.velocity = Vector2.up * _jumpForce;
+    }    
+
+    private bool CanJump()
+    {
+        bool checkGround = Input.GetKeyDown(KeyCode.Space);
+
+        return checkGround;
     }
 }
