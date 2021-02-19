@@ -6,25 +6,23 @@ public class Movement : MonoBehaviour
 {
     [SerializeField]
     private float _speed;
-    protected float _size;
-    protected float _positionX;
-    private float _positionZ;
-    private float _positionY;
+
+    protected Vector3 position;
+
+    [SerializeField]
     private Transform _transform;
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         _transform = GetComponent<Transform>();
-        _positionZ = GetComponent<Transform>().position.z;
-        _positionY = GetComponent<Transform>().position.y;
-        _size = GetComponent<SpriteRenderer>().bounds.size.x; 
+        position = _transform.position;
     }
 
     // Update is called once per frame
     protected virtual void Move()
     {
-        _positionX += _speed * Time.deltaTime;
-        _transform.position = new Vector3(_positionX, _positionY, _positionZ);
+        position.x += _speed * Time.deltaTime;
+        _transform.position = position;
     }
 }
