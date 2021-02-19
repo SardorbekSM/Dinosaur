@@ -1,26 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Destroy : MonoBehaviour
 {
-
     [SerializeField]
     private float _speed;
-    protected float _size;
-    protected float _positionX;
-    private float _positionZ;
-    private float _positionY;
+
+    protected Vector3 position;
     private Transform _transform;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         _transform = GetComponent<Transform>();
-        _positionZ = GetComponent<Transform>().position.z;
-        _positionY = GetComponent<Transform>().position.y;
-        _positionX = GetComponent<Transform>().position.x;
-        _size = GetComponent<SpriteRenderer>().bounds.size.x;
+        position = _transform.position; 
+        Destroy(gameObject, 4f);
+    }
+
+    // Update is called once per frame
+    protected virtual void Move()
+    {
+        position.x += _speed * Time.deltaTime;
+        _transform.position = position;
+    }
+
+}
+*/
+
+public class Destroy : Movement
+{
+    private void Start()
+    {
         Destroy(gameObject, 4f);
     }
 
@@ -28,12 +39,4 @@ public class Destroy : MonoBehaviour
     {
         Move();
     }
-
-    // Update is called once per frame
-    protected virtual void Move()
-    {
-        _positionX += _speed * Time.deltaTime;
-        _transform.position = new Vector3(_positionX, _positionY, _positionZ);
-    }
-
 }
