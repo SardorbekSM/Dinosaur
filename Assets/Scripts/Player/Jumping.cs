@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Jumping : MonoBehaviour
 {
-    private float _jumpForce = 5;
+    private float _jumpForce = 8;
 
     private Rigidbody2D _rigidbody2D;
 
@@ -39,7 +39,7 @@ public class Jumping : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _whatIsGround))
         {
-            Debug.Log("Is workin");
+            Debug.Log("Check Ground is workin");
             _extraJumps = 1;
 
             if (Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0)

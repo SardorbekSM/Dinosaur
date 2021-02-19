@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Destroy : MonoBehaviour
 {
+
     [SerializeField]
     private float _speed;
-    private float _position;
-    private float _size;
+    protected float _size;
+    protected float _positionX;
     private float _positionZ;
     private float _positionY;
     private Transform _transform;
@@ -18,19 +19,21 @@ public class Movement : MonoBehaviour
         _transform = GetComponent<Transform>();
         _positionZ = GetComponent<Transform>().position.z;
         _positionY = GetComponent<Transform>().position.y;
-        _size = GetComponent<SpriteRenderer>().bounds.size.x; 
+        _positionX = GetComponent<Transform>().position.x;
+        _size = GetComponent<SpriteRenderer>().bounds.size.x;
+        Destroy(gameObject, 4f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         Move();
     }
 
-    private void Move()
+    // Update is called once per frame
+    protected virtual void Move()
     {
-        _position += _speed * Time.deltaTime;
-        _position = Mathf.Repeat(_position, _size);
-        _transform.position = new Vector3(_position, _positionY, _positionZ);
+        _positionX += _speed * Time.deltaTime;
+        _transform.position = new Vector3(_positionX, _positionY, _positionZ);
     }
+
 }
