@@ -30,9 +30,12 @@ public class Destroy : MonoBehaviour
 
 public class Destroy : Movement
 {
+    [SerializeField]
+    private float _destroyTime;
+
     private void Start()
     {
-        Destroy(gameObject, 4f);
+        Destroy(gameObject, _destroyTime);
     }
 
     private void Update()
