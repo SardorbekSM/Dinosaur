@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class Repeating : Movement
 {
+    private float size;
+
+    private void Start()
+    {
+        size = GetComponent<SpriteRenderer>().bounds.size.x;
+    }
+
     private void Update()
     {
         Repeat();
     }
 
-    private void Repeat()
+    protected void Repeat()
     {
-        _positionX = Mathf.Repeat(_positionX, _size);
+        position.x = Mathf.Repeat(position.x, size);
         Move();
     }
 }
