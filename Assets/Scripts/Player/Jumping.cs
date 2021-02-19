@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jump : MonoBehaviour
+public class Jumping : MonoBehaviour
 {
     private float _jumpForce = 5;
 
@@ -27,27 +27,32 @@ public class Jump : MonoBehaviour
 
     private void Update()
     {
-        if (CanJump())
-        {
-            _Jump();
-        }
+        CanJump();        
     }
 
-    private void _Jump()
+    private void Jump()
     {
         _rigidbody2D.velocity = Vector2.up * _jumpForce;
     }    
 
-    private bool CanJump()
+    private void CanJump()
     {
         if (Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _whatIsGround))
         {
+            Debug.Log("Is workin");
             _extraJumps = 1;
+
+            if (Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0)
+            {
+                Jump();
+                _extraJumps--;
+            }
+            else if (Input.GetKeyDown(KeyCode.Space) && _extraJumps == 0)
+            {
+                Jump();
+            }
         }
 
-        bool checkGround = Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0;
-
-
-        return checkGround;
+               
     }
 }
