@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     private bool active = true;
 
