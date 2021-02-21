@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collisions : MonoBehaviour
-{
+public class Collisions : GameOver
+{ 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+            Hide();
+            canvas.SetActive(true);
+        }
+
+        if (collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
         }
