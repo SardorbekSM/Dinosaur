@@ -6,9 +6,9 @@ public class Rotate : MonoBehaviour
 {
     private float rotate = 0;
     // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        rotate += Time.fixedDeltaTime * 100;
+        rotate += Time.deltaTime * 100;
         transform.Rotate(0,0, rotate);        
     }
 }
