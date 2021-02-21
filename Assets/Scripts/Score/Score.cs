@@ -14,9 +14,9 @@ public class Score : MonoBehaviour
         _scoreText = GetComponent<Text>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         ++score;
-        _scoreText.text = Convert.ToString(score/100);
+        _scoreText.text = Convert.ToString(score/10);
     }
 }
