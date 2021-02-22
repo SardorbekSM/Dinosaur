@@ -6,7 +6,7 @@ using System;
 
 public class Score : MonoBehaviour
 {
-    private int score;
+    private int _score;
     private Text _scoreText;
 
     private void Awake()
@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ++score;
-        _scoreText.text = Convert.ToString(score/10);
+        ++_score;
+        _scoreText.text = Convert.ToString(_score/10);
     }
 }
