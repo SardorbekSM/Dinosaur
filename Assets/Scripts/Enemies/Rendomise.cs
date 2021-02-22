@@ -5,7 +5,7 @@ using UnityEngine;
 public class Rendomise : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Enemy;
+    private GameObject _Enemy;
 
     [SerializeField]
     private float _height;
@@ -19,8 +19,8 @@ public class Rendomise : MonoBehaviour
     {
         while (true)
         {
-            Instantiate(Enemy, new Vector3(10, _height, 0), Quaternion.Euler(0, 0, Random.Range(0f, 0)));
-            yield return new WaitForSeconds(Random.Range(2f, 4f));
+            Instantiate(_Enemy, new Vector3(10, _height, 0), Quaternion.Euler(0, 0, Random.Range(0f, 0)));
+            yield return new WaitForSeconds(Random.Range(4f, 6f));
         }
     }
 }
