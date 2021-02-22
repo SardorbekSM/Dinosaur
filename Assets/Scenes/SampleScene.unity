@@ -259,6 +259,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 980850380}
+  - {fileID: 494038362}
   m_Father: {fileID: 864208196}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -409,12 +410,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494038361}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 864208196}
-  m_RootOrder: 2
+  m_Father: {fileID: 187981583}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -913,7 +914,6 @@ RectTransform:
   m_Children:
   - {fileID: 579065669}
   - {fileID: 187981583}
-  - {fileID: 494038362}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1108,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d677fc289efe4db9c0a6ed46a392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 6055318645850249397, guid: d03eea41bcb5b794d9ef3ae10c586c3f, type: 3}
+  _Enemy: {fileID: 6055318645850249397, guid: d03eea41bcb5b794d9ef3ae10c586c3f, type: 3}
   _height: -3
 --- !u!114 &970907283
 MonoBehaviour:
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc759dc34ef966349af0fca329368436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 864208192}
+  canvas: {fileID: 187981582}
 --- !u!114 &970907284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1135,7 +1135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d677fc289efe4db9c0a6ed46a392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 3222984794715040405, guid: 6a67e290f5b2f81479c3b5ebb23afb56, type: 3}
+  _Enemy: {fileID: 3222984794715040405, guid: 6a67e290f5b2f81479c3b5ebb23afb56, type: 3}
   _height: 0
 --- !u!114 &970907285
 MonoBehaviour:
@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d677fc289efe4db9c0a6ed46a392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 4407890386275722615, guid: c6776a24dd01edd42bcf9378929fe095, type: 3}
+  _Enemy: {fileID: 4407890386275722615, guid: c6776a24dd01edd42bcf9378929fe095, type: 3}
   _height: -1.5
 --- !u!1 &980850379
 GameObject:
