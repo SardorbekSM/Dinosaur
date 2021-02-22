@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameOver : MonoBehaviour
 {
-    private bool active = true;
+    private bool _active = true;
 
     [SerializeField]
     protected GameObject canvas;
@@ -18,15 +18,16 @@ public class GameOver : MonoBehaviour
     protected virtual void Hide()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            if (active)
+            if (_active)
             {
                 canvas.SetActive(true);
-                active = false;
+                _active = false;
             }
             else
 
             {
-                canvas.SetActive(false); active = true;
+                canvas.SetActive(false);
+                _active = true;
             }
 
         if (Time.timeScale == 1)
