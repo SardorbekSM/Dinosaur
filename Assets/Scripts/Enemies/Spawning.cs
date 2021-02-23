@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Randomize : MonoBehaviour
+public class Spawning : MonoBehaviour
 {
     [SerializeField]
     private GameObject _Enemy;
