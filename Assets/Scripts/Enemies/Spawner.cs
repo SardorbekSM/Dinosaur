@@ -16,11 +16,12 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(Spawn());
-        _startPostion = new Vector3(_positionX, _height, 0);
     }
 
-    IEnumerator Spawn()
+    private IEnumerator Spawn()
     {
+        _startPostion = new Vector3(_positionX, _height, 0);
+
         while (true)
         {
             Instantiate(_enemy, _startPostion, Quaternion.Euler(0, 0, Random.Range(0f, 0)));
