@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class Rotation : MonoBehaviour
 {
     private float _rotate = 0;
     // Update is called once per frame
