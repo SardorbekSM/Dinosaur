@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class Randomise : MonoBehaviour
+public class Randomize : MonoBehaviour
 {
     [SerializeField]
     private GameObject _Enemy;
