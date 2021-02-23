@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Jumping : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class Jumping : MonoBehaviour
     private int _extraJumps = 1;
 
 
-    private void Start()
+    private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();        
     }
@@ -42,7 +40,6 @@ public class Jumping : MonoBehaviour
     {
         if (Physics2D.OverlapCircle(_groundCheck.position, _checkRadius, _whatIsGround))
         {
-            Debug.Log("Check Ground is workin");
             _extraJumps = 1;
 
             if (Input.GetKeyDown(KeyCode.Space) && _extraJumps > 0)
