@@ -9,20 +9,19 @@ public class GameOver : MonoBehaviour
 
     private void Awake()
     {
-        canvas.SetActive(_active);
+        Active(_active);
     }
 
     protected virtual void Hide()
     {
-        if (_active)
-        {
-            canvas.SetActive(!(_active = false));
-        }
-        else
-        {
-            canvas.SetActive(!(_active = true));                
-        }
+        Active(!_active);
         Pause();
+    }
+
+    private bool Active(bool active)
+    {
+        canvas.SetActive(active);
+        return !active;
     }
 
     private void Pause()
