@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Destruction : MonoBehaviour
+public class Destructor : MonoBehaviour
 {
     [SerializeField]
     private float _destroyTime;
