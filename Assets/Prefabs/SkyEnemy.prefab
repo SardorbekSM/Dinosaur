@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2622833439451337033}
   - component: {fileID: 1872332746108887070}
   - component: {fileID: -1155351015366205132}
-  - component: {fileID: 8952354388564326709}
-  - component: {fileID: -2656722915937486149}
   - component: {fileID: -208609720488060254}
+  - component: {fileID: -2656722915937486149}
+  - component: {fileID: -2403062724063717695}
+  - component: {fileID: 7182815410272066128}
   m_Layer: 0
   m_Name: SkyEnemy
   m_TagString: Enemy
@@ -106,33 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8952354388564326709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3222984794715040405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41db0699e784bd40901fba48d460cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: -7
-  _transform: {fileID: 2622833439451337033}
-  _destroyTime: 3
---- !u!114 &-2656722915937486149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3222984794715040405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57202740bf48aa469993ae2acefb18e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &-208609720488060254
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +123,44 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &-2656722915937486149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222984794715040405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57202740bf48aa469993ae2acefb18e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2403062724063717695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222984794715040405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41db0699e784bd40901fba48d460cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: -7
+  _transform: {fileID: 2622833439451337033}
+  _destroyTime: 5
+--- !u!114 &7182815410272066128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222984794715040405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d2102d98c1cc04ba4d04ec110f4248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: -7
+  _transform: {fileID: 2622833439451337033}

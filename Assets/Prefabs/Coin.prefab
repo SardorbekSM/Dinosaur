@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4407890386275722612}
   - component: {fileID: 4407890386275722613}
   - component: {fileID: 4407890386275722614}
-  - component: {fileID: 4407890386275723915}
   - component: {fileID: 447613287810669148}
+  - component: {fileID: 2038960372169800920}
+  - component: {fileID: 6696422365559048683}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Coin
@@ -103,21 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4407890386275723915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407890386275722615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41db0699e784bd40901fba48d460cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: -5
-  _transform: {fileID: 4407890386275722612}
-  _destroyTime: 5
 --- !u!61 &447613287810669148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -144,3 +130,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2038960372169800920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407890386275722615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d41db0699e784bd40901fba48d460cde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: -5
+  _transform: {fileID: 4407890386275722612}
+  _destroyTime: 5
+--- !u!114 &6696422365559048683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407890386275722615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d2102d98c1cc04ba4d04ec110f4248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: -5
+  _transform: {fileID: 4407890386275722612}

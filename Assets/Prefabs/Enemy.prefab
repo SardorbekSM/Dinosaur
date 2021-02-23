@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 6055318645850249416}
   - component: {fileID: 6055318645850249399}
   - component: {fileID: 6055318645850249398}
-  - component: {fileID: -639583107100324426}
+  - component: {fileID: -4625586073817382098}
+  - component: {fileID: -2154625804533823776}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -131,7 +132,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-639583107100324426
+--- !u!114 &-4625586073817382098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,3 +147,17 @@ MonoBehaviour:
   _speed: -5
   _transform: {fileID: 6055318645850249417}
   _destroyTime: 4
+--- !u!114 &-2154625804533823776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6055318645850249397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d2102d98c1cc04ba4d04ec110f4248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: -5
+  _transform: {fileID: 6055318645850249417}
