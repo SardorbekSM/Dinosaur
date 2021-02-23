@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
@@ -10,7 +8,7 @@ public class Movement : MonoBehaviour
     protected Vector3 position;
 
     [SerializeField]
-    private Transform _transform;
+    protected Transform _transform;
 
 
     private void Awake()
@@ -22,7 +20,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     protected virtual void Move()
     {
-        position.x += _speed * Time.deltaTime;
+        position.x += _speed * Time.deltaTime;        
         _transform.position = position;
     }
 }
