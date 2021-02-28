@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Jumping : MonoBehaviour
+public class JumpBehaviour : MonoBehaviour
 {
     private float _jumpForce = 7;
 
@@ -25,6 +25,7 @@ public class Jumping : MonoBehaviour
 
     private void Update()
     {
+
         if(CanJump())
         {
             Jump();
@@ -33,7 +34,8 @@ public class Jumping : MonoBehaviour
 
     private void Jump()
     {
-        _rigidbody2D.velocity = Vector2.up * _jumpForce;
+        _rigidbody2D.AddForce(transform.up * _jumpForce, ForceMode2D.Impulse);
+        //_rigidbody2D.velocity = Vector2.up * _jumpForce;
     }    
 
     private bool CanJump()
