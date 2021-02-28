@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class GameOver : MonoBehaviour
+public class GameOverScene : MonoBehaviour
 {
     private bool _active = false;
 
@@ -15,22 +15,12 @@ public class GameOver : MonoBehaviour
     protected virtual void Hide()
     {
         Active(!_active);
-        Pause();
+        Time.timeScale = 0;
     }
 
     private bool Active(bool active)
     {
         canvas.SetActive(active);
         return !active;
-    }
-
-    private void Pause()
-    {
-        if (Time.timeScale == 1)
-        {
-            Time.timeScale = 0;
-        }
-        else
-            Time.timeScale = 1;
     }
 }
