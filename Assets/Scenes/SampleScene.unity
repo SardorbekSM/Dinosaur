@@ -1095,7 +1095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d677fc289efe4db9c0a6ed46a392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Enemy: {fileID: 6055318645850249397, guid: d03eea41bcb5b794d9ef3ae10c586c3f, type: 3}
+  _enemy: {fileID: 6055318645850249397, guid: d03eea41bcb5b794d9ef3ae10c586c3f, type: 3}
   _height: -3
 --- !u!114 &970907283
 MonoBehaviour:
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d677fc289efe4db9c0a6ed46a392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Enemy: {fileID: 3222984794715040405, guid: 6a67e290f5b2f81479c3b5ebb23afb56, type: 3}
+  _enemy: {fileID: 3222984794715040405, guid: 6a67e290f5b2f81479c3b5ebb23afb56, type: 3}
   _height: 0
 --- !u!114 &970907285
 MonoBehaviour:
@@ -1136,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 138d677fc289efe4db9c0a6ed46a392b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Enemy: {fileID: 4407890386275722615, guid: c6776a24dd01edd42bcf9378929fe095, type: 3}
+  _enemy: {fileID: 4407890386275722615, guid: c6776a24dd01edd42bcf9378929fe095, type: 3}
   _height: -1.5
 --- !u!1 &980850379
 GameObject:
