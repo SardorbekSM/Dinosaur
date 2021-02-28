@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Repeating : Movement
+public class Repeater : Movement
 {
     private float size;
 

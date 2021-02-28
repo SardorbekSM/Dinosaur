@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Rotator : MonoBehaviour
+public class RotatorByZ : MonoBehaviour
 {
     private float _rotate = 0;
     // Update is called once per frame
