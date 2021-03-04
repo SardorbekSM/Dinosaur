@@ -1,12 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class Destructor : MonoBehaviour
 {
-    [SerializeField]
-    private float _destroyTime;
-
-    private void Start()
+    public void Destroyer(GameObject gameObject)
     {
-        Destroy(gameObject, _destroyTime);
+        Destroy(gameObject);
     }
 }
