@@ -50,7 +50,6 @@ public class JumpBehaviour : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Space) && _extraJumps == 0)
             {
-                Jump();
                 return true;
             }
         }
