@@ -17,7 +17,6 @@ public class Movement : MonoBehaviour
         position = _transform.position;
     }
 
-    // Update is called once per frame
     protected virtual void Move()
     {
         position.x += _speed * Time.deltaTime;        
