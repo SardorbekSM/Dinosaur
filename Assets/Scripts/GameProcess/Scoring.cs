@@ -2,10 +2,11 @@
 using UnityEngine.UI;
 using System;
 
-public class Score : MonoBehaviour
+public class Scoring : MonoBehaviour
 {
     private int _score;
     private Text _scoreText;
+    private int _calcAccuracy = 10;
 
     private void Awake()
     {
@@ -15,6 +16,6 @@ public class Score : MonoBehaviour
     private void FixedUpdate()
     {
         ++_score;
-        _scoreText.text = Convert.ToString(_score/10);
+        _scoreText.text = Convert.ToString(_score/_calcAccuracy);
     }
 }
