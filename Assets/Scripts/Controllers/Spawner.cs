@@ -10,6 +10,8 @@ public class Spawner : MonoBehaviour
     private float _height;
 
     private float _positionX = 10;
+    private float _randomFrom = 3f;
+    private float _randomTo = 5f;
 
     private Vector3 _startPostion;
     
@@ -25,7 +27,7 @@ public class Spawner : MonoBehaviour
         while (true)
         {
             Instantiate(_enemy, _startPostion, Quaternion.Euler(0, 0, Random.Range(0f, 0)));
-            yield return new WaitForSeconds(Random.Range(3f, 5f));
+            yield return new WaitForSeconds(Random.Range(_randomFrom, _randomTo));
         }
     }
 }
