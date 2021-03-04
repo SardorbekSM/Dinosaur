@@ -35,7 +35,6 @@ public class JumpBehaviour : MonoBehaviour
     private void Jump()
     {
         _rigidbody2D.AddForce(transform.up * _jumpForce, ForceMode2D.Impulse);
-        //_rigidbody2D.velocity = Vector2.up * _jumpForce;
     }    
 
     private bool CanJump()
