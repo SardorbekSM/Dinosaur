@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
-public class RotatorByZ : MonoBehaviour
+public class ByZTransformRotator : MonoBehaviour
 {
     private float _rotate = 0;
+    private int _calcAccuracy = 100;
     // Update is called once per frame
     private void FixedUpdate()
     {
-        _rotate += Time.deltaTime * 100;
+        _rotate += Time.deltaTime * _calcAccuracy;
         transform.Rotate(0,0, _rotate);        
     }
 }
