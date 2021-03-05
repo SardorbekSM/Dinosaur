@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -208609720488060254}
   - component: {fileID: -2656722915937486149}
   - component: {fileID: -2403062724063717695}
-  - component: {fileID: 7182815410272066128}
+  - component: {fileID: 1058247421668204233}
   m_Layer: 0
   m_Name: SkyEnemy
   m_TagString: Enemy
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destroyTime: 5
---- !u!114 &7182815410272066128
+--- !u!114 &1058247421668204233
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,8 +157,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3222984794715040405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d2102d98c1cc04ba4d04ec110f4248, type: 3}
+  m_Script: {fileID: 11500000, guid: 174ed6fb834c18e4bba2a171f5be456e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: -7
-  _transform: {fileID: 2622833439451337033}
