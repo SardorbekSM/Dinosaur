@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 
 [System.Serializable]
-public class EventManager : UnityEvent<GameObject>
+public class UnityGameObjectEvent : UnityEvent<GameObject>
 {
 
 }
