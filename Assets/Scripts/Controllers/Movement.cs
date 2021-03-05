@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour
         Move();
     }
 
-    private void Move()
+    protected virtual void Move()
     {
         position.x += _speed * Time.deltaTime;
         transform.position = position;
