@@ -2,11 +2,11 @@
 
 public class ByXPositionRepeater : Movement
 {
-    private float _size;
+    private float _boundSize;
 
     private void Awake()
     {
-        _size = GetComponent<SpriteRenderer>().bounds.size.x;
+        _boundSize = GetComponent<SpriteRenderer>().bounds.size.x;
         position = transform.position;
     }
 
@@ -17,7 +17,7 @@ public class ByXPositionRepeater : Movement
 
     private void Repeat()
     {
-        position.x = Mathf.Repeat(transform.position.x, _size);
+        position.x = Mathf.Repeat(transform.position.x, _boundSize);
         Move();
     }
 }
