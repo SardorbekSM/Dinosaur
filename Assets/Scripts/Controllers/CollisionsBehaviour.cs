@@ -1,24 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class CollisionsBehaviour : MonoBehaviour
 {
     [SerializeField]
-    private EventManager notify;
+    private UnityGameObjectEvent _notify;
 
     [SerializeField]
-    private UnityEvent gameEndNotify;
+    private UnityEvent _gameEndNotify;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            gameEndNotify?.Invoke();   
-        } 
+            _gameEndNotify?.Invoke();
+        }
         if (collision.gameObject.CompareTag("Coin"))
         {
-            notify.Invoke(collision.gameObject);
+            _notify.Invoke(collision.gameObject);
         }
     }
 }

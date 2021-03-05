@@ -15,18 +15,19 @@ public class JumpBehaviour : MonoBehaviour
     [SerializeField]
     private float _checkRadius;
 
+    [SerializeField]
     private int _extraJumps = 1;
 
 
     private void Awake()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();        
+        _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
 
-        if(CanJump())
+        if (CanJump())
         {
             Jump();
         }
@@ -35,7 +36,7 @@ public class JumpBehaviour : MonoBehaviour
     private void Jump()
     {
         _rigidbody2D.AddForce(transform.up * _jumpForce, ForceMode2D.Impulse);
-    }    
+    }
 
     private bool CanJump()
     {
