@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 
-public class ByXPositionRepeater : MonoBehaviour
+public class ByXPositionRepeater : Movement
 {
     private float _size;
 
-    private void Start()
+    private void Awake()
     {
         _size = GetComponent<SpriteRenderer>().bounds.size.x;
+        position = transform.position;
     }
 
     private void Update()
@@ -16,6 +17,7 @@ public class ByXPositionRepeater : MonoBehaviour
 
     private void Repeat()
     {
-        transform.position = new Vector3(Mathf.Repeat(transform.position.x, _size), transform.position.y, transform.position.z);
+        position.x = Mathf.Repeat(transform.position.x, _size);
+        Move();
     }
 }
