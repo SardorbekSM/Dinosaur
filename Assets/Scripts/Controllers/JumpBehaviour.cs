@@ -2,6 +2,7 @@
 
 public class JumpBehaviour : MonoBehaviour
 {
+    [SerializeField]
     private float _jumpForce = 7;
 
     private Rigidbody2D _rigidbody2D;
