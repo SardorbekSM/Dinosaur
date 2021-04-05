@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 
-public class ByXPositionRepeater : Movement
+public class ByXPositionRepeater : MonoBehaviour
 {
+
+    [SerializeField]
+    private float _speed;
+
     private float _boundSize;
+
+    private Vector3 position;
 
     private void Awake()
     {
@@ -19,5 +25,12 @@ public class ByXPositionRepeater : Movement
     {
         position.x = Mathf.Repeat(transform.position.x, _boundSize);
         Move();
+    }
+
+
+    protected virtual void Move()
+    {
+        position.x += _speed * Time.deltaTime;
+        transform.position = position;
     }
 }
