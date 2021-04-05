@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
 
     protected Vector3 position;
 
-    private void Awake()
+    private void Start()
     {
         position = transform.position;
     }
